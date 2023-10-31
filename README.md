@@ -1,2 +1,4 @@
-# alexjmeyer92.github.io
-github pages repo
+Personal Web Site Repo.
+
+deployed via github pages
+
