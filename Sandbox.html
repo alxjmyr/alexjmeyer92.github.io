@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button id="myButton" onclick="changeText()">Click me</button>
+
+    <script>
+        var textOptions = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5"];
+        var index = 0;
+
+        function changeText() {
+            var button = document.getElementById("myButton");
+            button.innerHTML = textOptions[index];
+            index = (index + 1) % textOptions.length;
+        }
+    </script>
+
+</body>
+
+</html>
