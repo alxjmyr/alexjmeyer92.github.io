@@ -21,14 +21,30 @@
     <!-- <img src="assets/earth.webp" alt="Picture Of Earth"> -->
     <br />
 
-    <h1>Click Here to Learn an Earth Fact</h1><button>Tell Me Earth Facts</button>
+    <h1>Click Below to Learn an Earth Fact</h1><button onclick="updateEarthFact()">Tell Me Earth Facts</button>
     <script>
+        const earthFacts = [
+            "Africa is the second largest continent on Earth",
+            "Earth has trees",
+            "Earth Is Cool When You Look At It In Space",
+            "Earth has houses",
+            "Earth has animals"
+        ]
+
+        const updateEarthFact = () => {
+            // pick an earth fact
+            const factIndex = Math.floor(Math.random() * earthFacts.length)
+
+            const fact = earthFacts[factIndex]
+
+            const pTag = document.getElementById("earthFactText")
+
+            pTag.textContent = fact
+        }
 
     </script>
-    <p>The Earth Fact Will Be Displayed Here</p>
+    <p id="earthFactText">The Earth Fact Will Be Displayed Here</p>
 
-    <h1 style="color:blue">Earth Is Cool When You Look At It In Space</h1>
-    <h1 style="color:blue">Earth has trees</h1>
 </body>
 
 </html>
