@@ -16,9 +16,30 @@
 
 <body style="background-color:rgb(185, 14, 42)">
     <h1 style="color:blue">My website is for learning about Earth</h1>
-    <button>Show Me Pictures</button>
+    <button onclick="updateEarthPic()">Show Me Pictures</button>
+    <script>
+        const earthPics = [
+            "/assets/earth_pic_1.jpeg",
+            "/assets/earth_pic2.png",
+            "/assets/earth_pic_3.jpeg",
+            "/assets/earth_pic_4.jpeg"
+        ]
+
+        const updateEarthPic = () => {
+            // pick an earth fact
+            const picIdx = Math.floor(Math.random() * earthPics.length)
+
+            const picPath = earthPics[picIdx]
+
+            const imgTag = document.getElementById("earthPic")
+
+            imgTag.src = picPath
+        }
+
+    </script>
     <br />
-    <!-- <img src="assets/earth.webp" alt="Picture Of Earth"> -->
+    <img id="earthPic" src="" alt="Picture Of Earth">
+    <!-- <img src="/assets/earth_pic2.png" alt="Picture Of Earth"> -->
     <br />
 
     <h1>Click Below to Learn an Earth Fact</h1><button onclick="updateEarthFact()">Tell Me Earth Facts</button>
