@@ -79,8 +79,29 @@
         <li>Dinos didn't live in houses</li>
         <li>Dinos just lived in nests outside</li>
     </ul>
+    <script>
+        const showPictures = (picElementId, btnId) => {
 
-    <img src="/assets/dino_pic_1.jpeg" alt="sweet dino picture">
+            var picDiv = document.getElementById(picElementId);
+            var bttn = document.getElementById(btnId)
+
+            if (picDiv.style.display === "flex") {
+                picDiv.style.display = 'none'
+                bttn.innerHTML = 'Show Pictures'
+            } else {
+                picDiv.style.display = 'flex'
+                bttn.innerHTML = 'Hide Pictures'
+            }
+        };
+    </script>
+    <button id="dinoPicBtn" onclick="showPictures('dinoPics', 'dinoPicBtn')">Show Pictures</button>
+
+    <div id="dinoPics" style="display: none; align-items: flex-start; ">
+        <img src="/assets/dino_pic_1.jpeg" width="400" height="400" style="margin: 15px;"
+            alt="sweet dino picture"></img>
+        <img src="/assets/dino_pic_2.jpeg" width="400" height="400" style="margin: 15px;"
+            alt="another sweet dino picture"></img>
+    </div>
 
     <h1 style="color:rgb(107, 11, 11)">Magic time learn about people on earth</h1>
 
@@ -96,6 +117,12 @@
         <li>sometimes it snows on earth</li>
         <li>snow melts if you put it in hot water</li>
     </ul>
+    <button id="snowPicBtn" onclick="showPictures('snowPics', 'snowPicBtn')">Show Pictures</button>
+    <div id="snowPics" style="display: none; align-items: flex-start;">
+        <img src="/assets/snow_pic.jpeg" width="500" height="450" style="margin: 15px;" alt="snowflake picture"></img>
+        <img src="/assets/snow_pic_2.jpeg" width="500" height="450" style="margin: 15px;"
+            alt="another snowflake picture"></img>
+    </div>
 </body>
 
 </html>
